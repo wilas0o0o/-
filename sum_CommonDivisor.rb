@@ -1,3 +1,4 @@
+# 公約数の
 def common_divisor(num)
     m = 1
     i = 0
