@@ -1,5 +1,5 @@
 def tribo(n)
-    tribo =[0, 0, 1]
+    tribo =[1, 0, 5]
     i = 3
     while i < n do
         tribo[i] = tribo[i-3] + tribo[i-2] + tribo[i-1]
