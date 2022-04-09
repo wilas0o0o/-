@@ -1,16 +1,17 @@
 def check(password, str)
-    pass_chars = password.chomp.chars
-    p pass_chars
-    pass_chars.each do |char|
-        if str.include?(char)
-            "Yes"
+    if password == str
+        "NO"
+    else
+        pass_chars = password.chars
+        str_chars = str.chars
+        if pass_chars & str_chars == pass_chars && str_chars & pass_chars == str_chars
+            "YES"
         else
             "NO"
         end
     end
-    
 end
 
-password = gets.to_s
-str = gets.to_s
-p check(password, str)
+password = gets.chomp.to_s
+str = gets.chomp.to_s
+puts check(password, str)
